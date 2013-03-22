@@ -2,8 +2,8 @@
 //  SudokuTests.h
 //  SudokuTests
 //
-//  Created by James Jia on 3/22/13.
-//  Copyright (c) 2013 self. All rights reserved.
+//  Created by Glenn Sugden on 2011.06.06.
+//
 //
 
 #import <SenTestingKit/SenTestingKit.h>

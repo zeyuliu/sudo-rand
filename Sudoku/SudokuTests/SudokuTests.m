@@ -2,8 +2,8 @@
 //  SudokuTests.m
 //  SudokuTests
 //
-//  Created by James Jia on 3/22/13.
-//  Copyright (c) 2013 self. All rights reserved.
+//  Created by Glenn Sugden on 2011.06.06.
+//
 //
 
 #import "SudokuTests.h"
@@ -14,12 +14,12 @@
 {
     [super setUp];
     
-    // Set-up code here.
+// Set-up code here.
 }
 
 - (void)tearDown
 {
-    // Tear-down code here.
+// Tear-down code here.
     
     [super tearDown];
 }
