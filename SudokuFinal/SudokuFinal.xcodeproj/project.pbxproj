@@ -21,6 +21,7 @@
 		A55724CA16FCE39800898710 /* SudokuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A55724C916FCE39800898710 /* SudokuModel.m */; };
 		A55724CD16FCE3C800898710 /* SudokuWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A55724CC16FCE3C800898710 /* SudokuWindowController.m */; };
 		A55724CF16FCE3F400898710 /* SudokuWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55724CE16FCE3F400898710 /* SudokuWindow.xib */; };
+		A559C0CC16FCE5B40093D7AC /* qqwing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A559C0CA16FCE5B40093D7AC /* qqwing.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,9 @@
 		A55724CB16FCE3C800898710 /* SudokuWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SudokuWindowController.h; sourceTree = "<group>"; };
 		A55724CC16FCE3C800898710 /* SudokuWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SudokuWindowController.m; sourceTree = "<group>"; };
 		A55724CE16FCE3F400898710 /* SudokuWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SudokuWindow.xib; sourceTree = "<group>"; };
+		A559C0C916FCE5B40093D7AC /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = "../../qqwing (preconfigured)/config.h"; sourceTree = "<group>"; };
+		A559C0CA16FCE5B40093D7AC /* qqwing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qqwing.cpp; path = "../../qqwing (preconfigured)/qqwing.cpp"; sourceTree = "<group>"; };
+		A559C0CB16FCE5B40093D7AC /* qqwing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = qqwing.h; path = "../../qqwing (preconfigured)/qqwing.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,9 @@
 				A55724C516FCE38700898710 /* SudokoView.h */,
 				A55724CB16FCE3C800898710 /* SudokuWindowController.h */,
 				A55724CE16FCE3F400898710 /* SudokuWindow.xib */,
+				A559C0C916FCE5B40093D7AC /* config.h */,
+				A559C0CA16FCE5B40093D7AC /* qqwing.cpp */,
+				A559C0CB16FCE5B40093D7AC /* qqwing.h */,
 				A55724CC16FCE3C800898710 /* SudokuWindowController.m */,
 				A55724C616FCE38700898710 /* SudokoView.m */,
 				A55724C816FCE39800898710 /* SudokuModel.h */,
@@ -286,6 +293,7 @@
 				A55724C716FCE38700898710 /* SudokoView.m in Sources */,
 				A55724CA16FCE39800898710 /* SudokuModel.m in Sources */,
 				A55724CD16FCE3C800898710 /* SudokuWindowController.m in Sources */,
+				A559C0CC16FCE5B40093D7AC /* qqwing.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +483,7 @@
 				A55724C116FCE37900898710 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A55724C216FCE37900898710 /* Build configuration list for PBXNativeTarget "SudokuFinalTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +492,7 @@
 				A55724C416FCE37900898710 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
