@@ -27,6 +27,9 @@
 #else
 #include <time.h>
 #endif
+int qqwing(int argc, char *argv[]);
+int timeSeed = (int)time(NULL);
+
 
 using namespace std;
 

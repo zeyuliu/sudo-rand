@@ -17,7 +17,7 @@
 		0A67B55516FCCC610077AEAD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A67B53516FCCC610077AEAD /* Cocoa.framework */; };
 		0A67B55D16FCCC610077AEAD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A67B55B16FCCC610077AEAD /* InfoPlist.strings */; };
 		0A67B56016FCCC610077AEAD /* SudokuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A67B55F16FCCC610077AEAD /* SudokuTests.m */; };
-		0A67B56B16FCD2390077AEAD /* qqwing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A67B56916FCD2390077AEAD /* qqwing.cpp */; };
+		0A67B57016FCD4A00077AEAD /* qqwing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A67B56E16FCD4A00077AEAD /* qqwing.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +50,9 @@
 		0A67B55C16FCCC610077AEAD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0A67B55E16FCCC610077AEAD /* SudokuTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SudokuTests.h; sourceTree = "<group>"; };
 		0A67B55F16FCCC610077AEAD /* SudokuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SudokuTests.m; sourceTree = "<group>"; };
-		0A67B56916FCD2390077AEAD /* qqwing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = qqwing.cpp; sourceTree = "<group>"; };
-		0A67B56A16FCD2390077AEAD /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		0A67B56A16FCD2390077AEAD /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = Sudoku/config.h; sourceTree = "<group>"; };
+		0A67B56E16FCD4A00077AEAD /* qqwing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = qqwing.cpp; sourceTree = "<group>"; };
+		0A67B57116FCD5EF0077AEAD /* qqwing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qqwing.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +79,7 @@
 		0A67B52916FCCC610077AEAD = {
 			isa = PBXGroup;
 			children = (
+				0A67B56D16FCD2B40077AEAD /* qqwing */,
 				0A67B53B16FCCC610077AEAD /* Sudoku */,
 				0A67B55816FCCC610077AEAD /* SudokuTests */,
 				0A67B53416FCCC610077AEAD /* Frameworks */,
@@ -117,8 +119,6 @@
 		0A67B53B16FCCC610077AEAD /* Sudoku */ = {
 			isa = PBXGroup;
 			children = (
-				0A67B56916FCD2390077AEAD /* qqwing.cpp */,
-				0A67B56A16FCD2390077AEAD /* config.h */,
 				0A67B54716FCCC610077AEAD /* AppDelegate.h */,
 				0A67B54816FCCC610077AEAD /* AppDelegate.m */,
 				0A67B54A16FCCC610077AEAD /* MainMenu.xib */,
@@ -156,6 +156,16 @@
 				0A67B55B16FCCC610077AEAD /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0A67B56D16FCD2B40077AEAD /* qqwing */ = {
+			isa = PBXGroup;
+			children = (
+				0A67B57116FCD5EF0077AEAD /* qqwing.h */,
+				0A67B56E16FCD4A00077AEAD /* qqwing.cpp */,
+				0A67B56A16FCD2390077AEAD /* config.h */,
+			);
+			name = qqwing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,7 +278,7 @@
 			files = (
 				0A67B54216FCCC610077AEAD /* main.m in Sources */,
 				0A67B54916FCCC610077AEAD /* AppDelegate.m in Sources */,
-				0A67B56B16FCD2390077AEAD /* qqwing.cpp in Sources */,
+				0A67B57016FCD4A00077AEAD /* qqwing.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
