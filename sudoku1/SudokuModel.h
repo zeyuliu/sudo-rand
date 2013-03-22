@@ -10,4 +10,7 @@
 
 @interface SudokuModel : NSObject
 
++(SudokuModel*)sharedModel; // # 15
+
+
 @end

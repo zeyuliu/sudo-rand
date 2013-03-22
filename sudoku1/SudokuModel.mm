@@ -9,6 +9,8 @@
 #import "SudokuModel.h"
 #include "qqwing.h"
 
+static SudokuModel* gSharedModel; // #15
+
 @implementation SudokuModel
 
 - (id)init
@@ -22,6 +24,16 @@
         
     }
     return self;
+}
+
++(SudokuModel*)sharedModel // # 15
+{
+    if (gSharedModel == nil)
+    {
+        gSharedModel = [[SudokuModel alloc] init];
+    }
+    
+    return (gSharedModel);
 }
 
 
