@@ -17,6 +17,7 @@
 		0A67B55516FCCC610077AEAD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A67B53516FCCC610077AEAD /* Cocoa.framework */; };
 		0A67B55D16FCCC610077AEAD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A67B55B16FCCC610077AEAD /* InfoPlist.strings */; };
 		0A67B56016FCCC610077AEAD /* SudokuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A67B55F16FCCC610077AEAD /* SudokuTests.m */; };
+		0A67B56B16FCD2390077AEAD /* qqwing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A67B56916FCD2390077AEAD /* qqwing.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		0A67B55C16FCCC610077AEAD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0A67B55E16FCCC610077AEAD /* SudokuTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SudokuTests.h; sourceTree = "<group>"; };
 		0A67B55F16FCCC610077AEAD /* SudokuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SudokuTests.m; sourceTree = "<group>"; };
+		0A67B56916FCD2390077AEAD /* qqwing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = qqwing.cpp; sourceTree = "<group>"; };
+		0A67B56A16FCD2390077AEAD /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,8 @@
 		0A67B53B16FCCC610077AEAD /* Sudoku */ = {
 			isa = PBXGroup;
 			children = (
+				0A67B56916FCD2390077AEAD /* qqwing.cpp */,
+				0A67B56A16FCD2390077AEAD /* config.h */,
 				0A67B54716FCCC610077AEAD /* AppDelegate.h */,
 				0A67B54816FCCC610077AEAD /* AppDelegate.m */,
 				0A67B54A16FCCC610077AEAD /* MainMenu.xib */,
@@ -263,6 +268,7 @@
 			files = (
 				0A67B54216FCCC610077AEAD /* main.m in Sources */,
 				0A67B54916FCCC610077AEAD /* AppDelegate.m in Sources */,
+				0A67B56B16FCD2390077AEAD /* qqwing.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +456,7 @@
 				0A67B56516FCCC610077AEAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A67B56616FCCC610077AEAD /* Build configuration list for PBXNativeTarget "SudokuTests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +465,7 @@
 				0A67B56816FCCC610077AEAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
