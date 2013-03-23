@@ -107,6 +107,61 @@
         }
     }
     
+    
+    // 24
+    if (_haveSelection)
+    {
+        [self paintSelectionRectangle];
+    }
+    
+}
+
+// 24
+-(void)mouseDown:(NSEvent *)event
+{
+    NSPoint location = [event locationInWindow];
+    CGFloat thirds = self.bounds.size.width / 3;
+    CGFloat ninths = thirds / 3;
+    
+    _selectionCellX = (UInt32)( location.x / thirds );
+    _selectionCellY = (UInt32)( location.y / thirds );
+    _selectionX = (UInt32)( ( location.x - ( _selectionCellX * thirds ) ) / ninths );
+    _selectionY = (UInt32)( ( location.y - ( _selectionCellY * thirds ) ) / ninths );
+    
+    _haveSelection = YES;
+    
+    [self setNeedsDisplay: YES];
+}
+
+//24
+- (void)keyDown: (NSEvent *)theEvent
+{
+    BOOL handled = NO;
+    
+    if (_haveSelection)
+    {
+        NSString *theChars = [theEvent charactersIgnoringModifiers];
+        unichar keyChar = [theChars characterAtIndex:0];
+        
+        if (keyChar>='1' && keyChar <'9')
+        {
+            [self._windowController setCurrentValue:keyChar-'0'
+                                            atCellX:_selectionCellX
+                                           andCellY:_selectionCellY
+                                             xIndex:_selectionX
+                                             yIndex:_selectionY];
+             handled = YES;
+        }
+    }
+    
+    if (handled == NO)
+    {
+        [super keyDown:theEvent];
+    }
+    else
+    {
+        [self setNeedsDisplay:YES];
+    }
 }
 
 @end
