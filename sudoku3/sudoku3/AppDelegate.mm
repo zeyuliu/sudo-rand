@@ -19,9 +19,13 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // removed in 16 SudokuModel* model = [[SudokuModel alloc] init]; //10
-    SudokuModel* model = [SudokuModel sharedModel]; // 16
-    SudokuModel* model2 = [SudokuModel sharedModel];
-    SudokuModel* model3 = [SudokuModel sharedModel];
+    //SudokuModel* model = [SudokuModel sharedModel]; // 16
+    //SudokuModel* model2 = [SudokuModel sharedModel];
+    //SudokuModel* model3 = [SudokuModel sharedModel];
+    
+    _playerWindowController = [[SudokuWindowController alloc] init]; // 18
+    [_playerWindowController.window setTitle:@"Player"]; // 18
+    [_playerWindowController.window makeKeyAndOrderFront:nil]; //18
 }
 
 @end

@@ -7,8 +7,15 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "SudokuWindowController.h" //18
+
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
+{
+@private
+    
+    SudokuWindowController* _playerWindowController; // 18
+}
 
 @property (assign) IBOutlet NSWindow *window;
 
