@@ -11,7 +11,7 @@
 		0ABBC43E16FD2060003EDECE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0ABBC43C16FD2060003EDECE /* InfoPlist.strings */; };
 		0ABBC44016FD2060003EDECE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABBC43F16FD2060003EDECE /* main.m */; };
 		0ABBC44416FD2060003EDECE /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0ABBC44216FD2060003EDECE /* Credits.rtf */; };
-		0ABBC44716FD2060003EDECE /* SudokuAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABBC44616FD2060003EDECE /* SudokuAppDelegate.m */; };
+		0ABBC44716FD2060003EDECE /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0ABBC44616FD2060003EDECE /* AppDelegate.mm */; };
 		0ABBC44A16FD2060003EDECE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ABBC44816FD2060003EDECE /* MainMenu.xib */; };
 		0ABBC45316FD20A4003EDECE /* qqwing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0ABBC45116FD20A4003EDECE /* qqwing.cpp */; };
 		0ABBC45716FD20F7003EDECE /* SudokuModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0ABBC45616FD20F7003EDECE /* SudokuModel.mm */; };
@@ -31,8 +31,8 @@
 		0ABBC43F16FD2060003EDECE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0ABBC44116FD2060003EDECE /* sudoku1-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "sudoku1-Prefix.pch"; sourceTree = "<group>"; };
 		0ABBC44316FD2060003EDECE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		0ABBC44516FD2060003EDECE /* SudokuAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SudokuAppDelegate.h; sourceTree = "<group>"; };
-		0ABBC44616FD2060003EDECE /* SudokuAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SudokuAppDelegate.m; sourceTree = "<group>"; };
+		0ABBC44516FD2060003EDECE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0ABBC44616FD2060003EDECE /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		0ABBC44916FD2060003EDECE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		0ABBC45016FD20A4003EDECE /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		0ABBC45116FD20A4003EDECE /* qqwing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = qqwing.cpp; sourceTree = "<group>"; };
@@ -99,8 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				0ABBC44816FD2060003EDECE /* MainMenu.xib */,
-				0ABBC44516FD2060003EDECE /* SudokuAppDelegate.h */,
-				0ABBC44616FD2060003EDECE /* SudokuAppDelegate.m */,
+				0ABBC44516FD2060003EDECE /* AppDelegate.h */,
+				0ABBC44616FD2060003EDECE /* AppDelegate.mm */,
 				0ABBC45516FD20F7003EDECE /* SudokuModel.h */,
 				0ABBC45616FD20F7003EDECE /* SudokuModel.mm */,
 				0ABBC45816FD2387003EDECE /* SudokuWindow.xib */,
@@ -201,7 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ABBC44016FD2060003EDECE /* main.m in Sources */,
-				0ABBC44716FD2060003EDECE /* SudokuAppDelegate.m in Sources */,
+				0ABBC44716FD2060003EDECE /* AppDelegate.mm in Sources */,
 				0ABBC45316FD20A4003EDECE /* qqwing.cpp in Sources */,
 				0ABBC45716FD20F7003EDECE /* SudokuModel.mm in Sources */,
 				0ABBC45C16FD23CE003EDECE /* SudokuWindowController.m in Sources */,

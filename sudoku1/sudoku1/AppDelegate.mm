@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 self. All rights reserved.
 //
 
-#import "SudokuAppDelegate.h"
+#import "AppDelegate.h"
 
-@implementation SudokuAppDelegate
+@implementation AppDelegate
 
 - (void)dealloc
 {
@@ -18,7 +18,9 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
-    SudokuModel* model = [[SudokuModel alloc] init];
+    SudokuModel* model = [SudokuModel sharedModel]; // Changed to shared in #16
+    SudokuModel* model2 = [SudokuModel sharedModel];
+    SudokuModel* model3 = [SudokuModel sharedModel];
 }
 
 @end
