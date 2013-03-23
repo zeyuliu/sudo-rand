@@ -7,12 +7,20 @@
 //
 
 #import "SudokuAppDelegate.h"
+#import "SudokuModel.h"
 
 @implementation SudokuAppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
+    _playerWindowController = [[SudokuWindowController alloc] init];
+    [_playerWindowController.window setTitle:@"Player"];
+    _playerWindowController._human = true;
+    _compWindowController = [[SudokuWindowController alloc] init];
+    [_compWindowController.window setTitle:@"Computer"];
+    _compWindowController._human = false;
+
+    [_playerWindowController.window makeKeyAndOrderFront:nil];
 }
 
 @end

@@ -5,10 +5,3 @@
 #ifdef __OBJC__
     #import <Cocoa/Cocoa.h>
 #endif
-
-#if DEBUG
-//#   define GA_DEBUG           1
-//    cerr undefined...
-#else//DEBUG
-#   define NDEBUG               1
-#endif//DEBUG

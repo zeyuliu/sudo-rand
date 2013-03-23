@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A5FE324C16FD333200BD11C7"
+               BlueprintIdentifier = "93CDB30A16264C8500351560"
                BuildableName = "Sudoku.app"
                BlueprintName = "Sudoku"
                ReferencedContainer = "container:Sudoku.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A5FE326C16FD333300BD11C7"
+               BlueprintIdentifier = "93CDB32B16264C8500351560"
                BuildableName = "SudokuTests.octest"
                BlueprintName = "SudokuTests"
                ReferencedContainer = "container:Sudoku.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A5FE324C16FD333200BD11C7"
+            BlueprintIdentifier = "93CDB30A16264C8500351560"
             BuildableName = "Sudoku.app"
             BlueprintName = "Sudoku"
             ReferencedContainer = "container:Sudoku.xcodeproj">
@@ -61,7 +61,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A5FE324C16FD333200BD11C7"
+            BlueprintIdentifier = "93CDB30A16264C8500351560"
             BuildableName = "Sudoku.app"
             BlueprintName = "Sudoku"
             ReferencedContainer = "container:Sudoku.xcodeproj">
@@ -79,7 +79,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A5FE324C16FD333200BD11C7"
+            BlueprintIdentifier = "93CDB30A16264C8500351560"
             BuildableName = "Sudoku.app"
             BlueprintName = "Sudoku"
             ReferencedContainer = "container:Sudoku.xcodeproj">

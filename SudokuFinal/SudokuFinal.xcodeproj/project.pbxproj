@@ -17,7 +17,6 @@
 		A55724B116FCE37900898710 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A557249116FCE37800898710 /* Cocoa.framework */; };
 		A55724B916FCE37900898710 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A55724B716FCE37900898710 /* InfoPlist.strings */; };
 		A55724BC16FCE37900898710 /* SudokuFinalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A55724BB16FCE37900898710 /* SudokuFinalTests.m */; };
-		A55724C716FCE38700898710 /* SudokoView.m in Sources */ = {isa = PBXBuildFile; fileRef = A55724C616FCE38700898710 /* SudokoView.m */; };
 		A55724CA16FCE39800898710 /* SudokuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A55724C916FCE39800898710 /* SudokuModel.m */; };
 		A55724CD16FCE3C800898710 /* SudokuWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A55724CC16FCE3C800898710 /* SudokuWindowController.m */; };
 		A55724CF16FCE3F400898710 /* SudokuWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55724CE16FCE3F400898710 /* SudokuWindow.xib */; };
@@ -54,8 +53,6 @@
 		A55724B816FCE37900898710 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A55724BA16FCE37900898710 /* SudokuFinalTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SudokuFinalTests.h; sourceTree = "<group>"; };
 		A55724BB16FCE37900898710 /* SudokuFinalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SudokuFinalTests.m; sourceTree = "<group>"; };
-		A55724C516FCE38700898710 /* SudokoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SudokoView.h; sourceTree = "<group>"; };
-		A55724C616FCE38700898710 /* SudokoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SudokoView.m; sourceTree = "<group>"; };
 		A55724C816FCE39800898710 /* SudokuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SudokuModel.h; sourceTree = "<group>"; };
 		A55724C916FCE39800898710 /* SudokuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SudokuModel.m; sourceTree = "<group>"; };
 		A55724CB16FCE3C800898710 /* SudokuWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SudokuWindowController.h; sourceTree = "<group>"; };
@@ -133,14 +130,12 @@
 				A55724A416FCE37800898710 /* SudokuAppDelegate.m */,
 				A55724A616FCE37900898710 /* MainMenu.xib */,
 				A557249816FCE37800898710 /* Supporting Files */,
-				A55724C516FCE38700898710 /* SudokoView.h */,
 				A55724CB16FCE3C800898710 /* SudokuWindowController.h */,
 				A55724CE16FCE3F400898710 /* SudokuWindow.xib */,
 				A559C0C916FCE5B40093D7AC /* config.h */,
 				A559C0CA16FCE5B40093D7AC /* qqwing.cpp */,
 				A559C0CB16FCE5B40093D7AC /* qqwing.h */,
 				A55724CC16FCE3C800898710 /* SudokuWindowController.m */,
-				A55724C616FCE38700898710 /* SudokoView.m */,
 				A55724C816FCE39800898710 /* SudokuModel.h */,
 				A55724C916FCE39800898710 /* SudokuModel.m */,
 			);
@@ -290,7 +285,6 @@
 			files = (
 				A557249E16FCE37800898710 /* main.m in Sources */,
 				A55724A516FCE37800898710 /* SudokuAppDelegate.m in Sources */,
-				A55724C716FCE38700898710 /* SudokoView.m in Sources */,
 				A55724CA16FCE39800898710 /* SudokuModel.m in Sources */,
 				A55724CD16FCE3C800898710 /* SudokuWindowController.m in Sources */,
 				A559C0CC16FCE5B40093D7AC /* qqwing.cpp in Sources */,

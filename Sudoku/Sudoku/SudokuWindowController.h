@@ -2,12 +2,11 @@
 //  SudokuWindowController.h
 //  Sudoku
 //
-//  Created by Glenn Sugden on 2011.08.19.
-//  This source is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
-//  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+//  Created by Matthew Miller on 3/22/13.
+//  Copyright (c) 2013 Matthew Miller. All rights reserved.
+//
 
 #import <Cocoa/Cocoa.h>
-
 #import "SudokuModel.h"
 #import "SudokuView.h"
 
@@ -16,16 +15,16 @@
     SudokuModel* _model;
     
     IBOutlet SudokuView* _view;
-
-    CGFloat _timerSpeed;
-
-    BOOL _isComputer;
+    
+    UInt32 _timerSpeed;
+    
+    BOOL _human;
 }
 
 @property (assign, nonatomic) SudokuModel* _model;
 @property (assign, nonatomic) IBOutlet SudokuView* _view;
-@property (assign) BOOL _isComputer;
-@property (assign) CGFloat _timerSpeed;
+@property (assign) BOOL human;
+@property (assign) UInt32 _timerSpeed;
 
 -( BOOL )isOriginalValueAtCellX:( UInt32 )cellX andCellY:( UInt32 )cellY xIndex:( UInt32 )x yIndex:( UInt32 )y;
 -(UInt32)getOriginalValueAtCellX:(UInt32)cellX andCellY:(UInt32)cellY xIndex:(UInt32)x yIndex:(UInt32)y;
