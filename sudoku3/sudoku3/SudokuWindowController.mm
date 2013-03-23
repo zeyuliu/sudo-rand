@@ -41,11 +41,6 @@
     return self;
 }
 
-// 29
-- (BOOL) acceptsFirstResponder
-{
-    return (YES);
-}
 
 - (void)windowDidLoad
 {

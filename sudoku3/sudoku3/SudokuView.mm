@@ -216,4 +216,10 @@
     }
 }
 
+// 29
+- (BOOL) acceptsFirstResponder
+{
+    return (YES);
+}
+
 @end
