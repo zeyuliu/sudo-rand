@@ -170,8 +170,18 @@
     _selectionX = (UInt32)( ( location.x - ( _selectionCellX * thirds ) ) / ninths );
     _selectionY = (UInt32)( ( location.y - ( _selectionCellY * thirds ) ) / ninths );
     
-    _haveSelection = YES;
+    // removed 30 _haveSelection = YES;
     
+    if ([self._windowController isOriginalValueAtCellX:_selectionCellX andCellY:_selectionCellY
+                                                xIndex:_selectionX yIndex:_selectionY] == NO)
+    {
+        _haveSelection = YES;
+    }
+    else
+    {
+        _haveSelection = NO;
+    }
+
     [self setNeedsDisplay: YES];
 }
 

@@ -22,5 +22,8 @@
 
 -(void)setCurrentValue:(UInt32)value atCellX:(UInt32)cellX andCellY:(UInt32)cellY
                 xIndex:(UInt32)x yIndex:(UInt32)y;
+//30
+-( BOOL )isOriginalValueAtCellX:( UInt32 )cellX andCellY:( UInt32 )cellY
+                         xIndex:( UInt32 )x yIndex:( UInt32 )y;
 
 @end

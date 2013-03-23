@@ -88,4 +88,18 @@ static SudokuModel* gSharedModel; //15
     _playerPuzzleInProgress[ mCellToArrayIndex(cellX,cellY,x,y) ] = value;
 }
 
+// 30
+-( BOOL )isOriginalValueAtCellX:( UInt32 )cellX andCellY:( UInt32 )cellY
+                         xIndex:( UInt32 )x yIndex:( UInt32 )y
+{
+    if ( [ self getOriginalValueAtCellX: cellX andCellY: cellY xIndex: x yIndex: y ] != 0 )
+    {
+        return YES;
+    }
+    else
+    {
+        return NO;
+    }
+}
+
 @end
