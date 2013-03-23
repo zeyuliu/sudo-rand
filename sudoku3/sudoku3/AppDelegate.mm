@@ -22,22 +22,71 @@
     [super dealloc];
 }
 
--(void)setUpDifficultyMenu
+-(void)setUpDifficultyMenu // 34
 {
     NSMenu* mainMenu = [NSApp mainMenu];
     NSMenuItem* viewMenu = [mainMenu itemWithTitle:@"View"];
     
     [mainMenu removeItem:viewMenu];
+/** Removed in 35
+ 
+ NSMenuItem* difficultyTopMenuItem = [[NSMenuItem allocWithZone:[NSMenu menuZone]]
+ initWithTitle:@"Difficulty" action:nil keyEquivalent:@""];
+ 
+ NSMenu* difficultyTopMenu = [[NSMenu alloc] initWithTitle:@"Difficulty"];
+ 
+ [difficultyTopMenuItem setSubmenu:difficultyTopMenu];
+ 
+ [mainMenu insertItem:difficultyTopMenuItem atIndex:4];
+
+ */
+ 
+    // 35
+    NSMenuItem* difficultyTopMenuItem = [[NSMenuItem allocWithZone: [NSMenu menuZone]]
+                                         initWithTitle: @"Difficulty"
+                                         action: nil
+                                         keyEquivalent: @""];
     
-    NSMenuItem* difficultyTopMenuItem = [[NSMenuItem allocWithZone:[NSMenu menuZone]]
-                                         initWithTitle:@"Difficulty" action:nil keyEquivalent:@""];
+    NSMenu* difficultyTopMenu = [[NSMenu alloc] initWithTitle: @"Difficulty"];
+    [difficultyTopMenuItem setSubmenu: difficultyTopMenu];
+    [mainMenu insertItem: difficultyTopMenuItem atIndex: 4];
     
-    NSMenu* difficultyTopMenu = [[NSMenu alloc] initWithTitle:@"Difficulty"];
+    NSMenuItem* difficultyMenuItem = [[NSMenuItem allocWithZone: [NSMenu menuZone]]
+                                      initWithTitle: @"Random"
+                                      action: @selector( menuSelected: )
+                                      keyEquivalent: @"0"];
+    [difficultyMenuItem setTarget: _playerWindowController];
+    [difficultyTopMenu addItem: difficultyMenuItem];
     
-    [difficultyTopMenuItem setSubmenu:difficultyTopMenu];
+    [difficultyTopMenu addItem: [NSMenuItem separatorItem]];
     
-    [mainMenu insertItem:difficultyTopMenuItem atIndex:4];
+    difficultyMenuItem = [[NSMenuItem allocWithZone: [NSMenu menuZone]]
+                                      initWithTitle: @"Simple"
+                                      action: @selector( menuSelected: )
+                                      keyEquivalent: @"1"];
+    [difficultyMenuItem setTarget: _playerWindowController];
+    [difficultyTopMenu addItem: difficultyMenuItem];
     
+    difficultyMenuItem = [[NSMenuItem allocWithZone: [NSMenu menuZone]]
+                          initWithTitle: @"Easy"
+                          action: @selector( menuSelected: )
+                          keyEquivalent: @"2"];
+    [difficultyMenuItem setTarget: _playerWindowController];
+    [difficultyTopMenu addItem: difficultyMenuItem];
+    
+    difficultyMenuItem = [[NSMenuItem allocWithZone: [NSMenu menuZone]]
+                          initWithTitle: @"Intermediate"
+                          action: @selector( menuSelected: )
+                          keyEquivalent: @"3"];
+    [difficultyMenuItem setTarget: _playerWindowController];
+    [difficultyTopMenu addItem: difficultyMenuItem];
+    
+    difficultyMenuItem = [[NSMenuItem allocWithZone: [NSMenu menuZone]]
+                          initWithTitle: @"Expert"
+                          action: @selector( menuSelected: )
+                          keyEquivalent: @"4"];
+    [difficultyMenuItem setTarget: _playerWindowController];
+    [difficultyTopMenu addItem: difficultyMenuItem];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
