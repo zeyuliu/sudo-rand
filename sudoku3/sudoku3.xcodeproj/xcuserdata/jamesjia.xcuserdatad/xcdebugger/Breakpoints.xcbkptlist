@@ -4,16 +4,16 @@
    version = "1.0">
    <FileBreakpoints>
       <FileBreakpoint
-         shouldBeEnabled = "No"
+         shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "sudoku3/AppDelegate.mm"
-         timestampString = "385702360.406768"
+         timestampString = "385693403.010382"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "106"
-         endingLineNumber = "106"
-         landmarkName = "-redrawWindows"
+         startingLineNumber = "29"
+         endingLineNumber = "29"
+         landmarkName = "-setUpDifficultyMenu"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
