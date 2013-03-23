@@ -9,11 +9,35 @@
 #import "AppDelegate.h"
 #import "SudokuModel.h"
 
+// 34
+@interface AppDelegate (hidden)
+-(void)setUpDifficultyMenu;
+@end
+
+
 @implementation AppDelegate
 
 - (void)dealloc
 {
     [super dealloc];
+}
+
+-(void)setUpDifficultyMenu
+{
+    NSMenu* mainMenu = [NSApp mainMenu];
+    NSMenuItem* viewMenu = [mainMenu itemWithTitle:@"View"];
+    
+    [mainMenu removeItem:viewMenu];
+    
+    NSMenuItem* difficultyTopMenuItem = [[NSMenuItem allocWithZone:[NSMenu menuZone]]
+                                         initWithTitle:@"Difficulty" action:nil keyEquivalent:@""];
+    
+    NSMenu* difficultyTopMenu = [[NSMenu alloc] initWithTitle:@"Difficulty"];
+    
+    [difficultyTopMenuItem setSubmenu:difficultyTopMenu];
+    
+    [mainMenu insertItem:difficultyTopMenuItem atIndex:4];
+    
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
@@ -26,6 +50,8 @@
     _playerWindowController = [[SudokuWindowController alloc] init]; // 18
     [_playerWindowController.window setTitle:@"Player"]; // 18
     [_playerWindowController.window makeKeyAndOrderFront:nil]; //18
+    
+    [self setUpDifficultyMenu]; //34
 }
 
 @end
