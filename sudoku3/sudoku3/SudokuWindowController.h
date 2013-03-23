@@ -26,4 +26,6 @@
 -( BOOL )isOriginalValueAtCellX:( UInt32 )cellX andCellY:( UInt32 )cellY
                          xIndex:( UInt32 )x yIndex:( UInt32 )y;
 
+//32
+-(BOOL)isPuzzleSolved;
 @end

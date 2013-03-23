@@ -53,10 +53,18 @@ static SudokuModel* gSharedModel; //15
         
         memcpy( _playerPuzzleInProgress,_sudokuBoard->getPuzzle(),81*sizeof(int));
         
+        // added 32
+        _sudokuBoard->printSolution();
+        _playerPuzzleInProgress[mCellToArrayIndex(1, 1, 1, 1)] =0;
+        
     }
     return self;
 }
 
+-(BOOL)isPuzzleSolved //added 32
+{
+    return (memcmp (_playerPuzzleInProgress, _sudokuBoard->getSolution(), 81*sizeof(int))==0);
+}
 
 +(SudokuModel*)sharedModel // 15
 {

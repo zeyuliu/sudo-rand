@@ -95,6 +95,17 @@
                 
                 if ( value != 0 )
                 {
+                    // included in 31
+                    NSColor* color;
+                    
+                    if ([self._windowController isOriginalValueAtCellX:cellX andCellY:cellY xIndex:x yIndex:y])
+                    {
+                        color = [NSColor blackColor];
+                    }
+                    else
+                    {
+                        color = [NSColor blueColor];
+                    }
                     NSPoint valueDrawPosition = NSMakePoint(bounds.origin.x +
                                                             x * thirdWidth + thirdWidth / 3,
                                                             bounds.origin.y +
@@ -104,9 +115,11 @@
                     
                     NSFont *font = [NSFont fontWithName:@"American Typewriter" size:thirdHeight/2.0];
                     
+
+                    
                     NSDictionary *attrsDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
                                                      font, NSFontAttributeName,
-                                                     [NSColor blackColor], NSForegroundColorAttributeName,
+                                                     color, NSForegroundColorAttributeName,
                                                      nil];
                     
                     [valueString drawAtPoint:valueDrawPosition withAttributes:attrsDictionary];
@@ -154,6 +167,26 @@
     if (_haveSelection)
     {
         [self paintSelectionRectangle];
+    }
+    
+    
+    //33
+    
+    if ( [_windowController isPuzzleSolved]) // is this right???
+    {
+        NSInteger fourth = self.bounds.size.height / 4;
+        
+        NSColor* winColor = [NSColor colorWithSRGBRed:1.0 green:0.0 blue:0.0 alpha:0.33];
+        
+        NSFont *font = [NSFont fontWithName:@"Zapfino" size:60];
+        
+        NSDictionary* attrsDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+                                         font, NSFontAttributeName, winColor, NSForegroundColorAttributeName,
+                                         [NSNumber numberWithDouble:16.0], NSStrokeWidthAttributeName, nil];
+        
+        NSPoint solvedDrawPosition = NSMakePoint(self.bounds.origin.x, self.bounds.origin.y + fourth);
+        
+        [@"SOLVED!" drawAtPoint:solvedDrawPosition withAttributes:attrsDictionary];
     }
     
 }

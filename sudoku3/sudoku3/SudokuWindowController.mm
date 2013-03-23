@@ -45,6 +45,7 @@
 - (void)windowDidLoad
 {
     [super windowDidLoad];
+    [self.window setAspectRatio:NSMakeSize(1.0, 1.0)];
     
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
     
@@ -77,4 +78,9 @@
     [self._model setCurrentValue:value atCellX:cellX andCellY:cellY xIndex:x yIndex:y];
 }
 
+//32
+-(BOOL)isPuzzleSolved
+{
+    return ([_model isPuzzleSolved]);
+}
 @end
