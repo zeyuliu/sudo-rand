@@ -50,4 +50,20 @@
     _model = [SudokuModel sharedModel]; // 17
 }
 
+// 26
+-(UInt32)getOriginalValueAtCellX:(UInt32)cellX andCellY:(UInt32)cellY xIndex:(UInt32)x yIndex:(UInt32)y
+{
+    return ([self._model getOriginalValueAtCellX:cellX andCellY:cellY xIndex:x yIndex:y]);
+}
+
+-(UInt32)getCurrentValueAtCellX:(UInt32)cellX andCellY:(UInt32)cellY xIndex:(UInt32)x yIndex:(UInt32)y
+{
+    return ([self._model getCurrentValueAtCellX:cellX andCellY:cellY xIndex:x yIndex:y]);
+}
+
+-(void)setCurrentValue:(UInt32)value atCellX:(UInt32)cellX andCellY:(UInt32)cellY xIndex:(UInt32)x yIndex:(UInt32)y
+{
+    [self._model setCurrentValue:value atCellX:cellX andCellY:cellY xIndex:x yIndex:y];
+}
+
 @end

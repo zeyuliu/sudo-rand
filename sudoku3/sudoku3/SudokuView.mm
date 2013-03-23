@@ -143,6 +143,9 @@
             smallBounds = NSInsetRect(smallBounds, 4.0, 4.0);
             
             [self drawHashInBounds: smallBounds usingColor: [NSColor whiteColor]];
+            
+            //25
+            [self drawValueAtCellX:x andCellY:y inBounds:smallBounds];
         }
     }
     

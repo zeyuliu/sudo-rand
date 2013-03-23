@@ -10,8 +10,8 @@
 		0AACDEAC16FD2DDE00A4879F /* SudokuModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0AACDEAB16FD2DDE00A4879F /* SudokuModel.mm */; };
 		0AACDEB016FD2E6B00A4879F /* qqwing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0AACDEAE16FD2E6B00A4879F /* qqwing.cpp */; };
 		0AACDEB216FD2EF500A4879F /* SudokuWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AACDEB116FD2EF500A4879F /* SudokuWindow.xib */; };
-		0AACDEB516FD2F0E00A4879F /* SudokuWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AACDEB416FD2F0E00A4879F /* SudokuWindowController.m */; };
-		0AACDEB816FD310800A4879F /* SudokuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AACDEB716FD310800A4879F /* SudokuView.m */; };
+		0AACDEB516FD2F0E00A4879F /* SudokuWindowController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0AACDEB416FD2F0E00A4879F /* SudokuWindowController.mm */; };
+		0AACDEB816FD310800A4879F /* SudokuView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0AACDEB716FD310800A4879F /* SudokuView.mm */; };
 		0ABBC4A516FD2D77003EDECE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ABBC4A416FD2D77003EDECE /* Cocoa.framework */; };
 		0ABBC4AF16FD2D77003EDECE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0ABBC4AD16FD2D77003EDECE /* InfoPlist.strings */; };
 		0ABBC4B116FD2D77003EDECE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABBC4B016FD2D77003EDECE /* main.m */; };
@@ -28,9 +28,9 @@
 		0AACDEAF16FD2E6B00A4879F /* qqwing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = qqwing.h; path = ../qqwing.h; sourceTree = "<group>"; };
 		0AACDEB116FD2EF500A4879F /* SudokuWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SudokuWindow.xib; sourceTree = "<group>"; };
 		0AACDEB316FD2F0E00A4879F /* SudokuWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SudokuWindowController.h; sourceTree = "<group>"; };
-		0AACDEB416FD2F0E00A4879F /* SudokuWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SudokuWindowController.m; sourceTree = "<group>"; };
+		0AACDEB416FD2F0E00A4879F /* SudokuWindowController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SudokuWindowController.mm; sourceTree = "<group>"; };
 		0AACDEB616FD310800A4879F /* SudokuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SudokuView.h; sourceTree = "<group>"; };
-		0AACDEB716FD310800A4879F /* SudokuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SudokuView.m; sourceTree = "<group>"; };
+		0AACDEB716FD310800A4879F /* SudokuView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SudokuView.mm; sourceTree = "<group>"; };
 		0ABBC4A116FD2D77003EDECE /* sudoku3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sudoku3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ABBC4A416FD2D77003EDECE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0ABBC4A716FD2D77003EDECE /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -104,11 +104,11 @@
 				0AACDEAB16FD2DDE00A4879F /* SudokuModel.mm */,
 				0AACDEB116FD2EF500A4879F /* SudokuWindow.xib */,
 				0AACDEB316FD2F0E00A4879F /* SudokuWindowController.h */,
-				0AACDEB416FD2F0E00A4879F /* SudokuWindowController.m */,
+				0AACDEB416FD2F0E00A4879F /* SudokuWindowController.mm */,
 				0ABBC4B616FD2D77003EDECE /* AppDelegate.h */,
 				0ABBC4B716FD2D77003EDECE /* AppDelegate.mm */,
 				0AACDEB616FD310800A4879F /* SudokuView.h */,
-				0AACDEB716FD310800A4879F /* SudokuView.m */,
+				0AACDEB716FD310800A4879F /* SudokuView.mm */,
 				0ABBC4B916FD2D77003EDECE /* MainMenu.xib */,
 				0ABBC4AB16FD2D77003EDECE /* Supporting Files */,
 			);
@@ -196,8 +196,8 @@
 				0ABBC4B816FD2D77003EDECE /* AppDelegate.mm in Sources */,
 				0AACDEAC16FD2DDE00A4879F /* SudokuModel.mm in Sources */,
 				0AACDEB016FD2E6B00A4879F /* qqwing.cpp in Sources */,
-				0AACDEB516FD2F0E00A4879F /* SudokuWindowController.m in Sources */,
-				0AACDEB816FD310800A4879F /* SudokuView.m in Sources */,
+				0AACDEB516FD2F0E00A4879F /* SudokuWindowController.mm in Sources */,
+				0AACDEB816FD310800A4879F /* SudokuView.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

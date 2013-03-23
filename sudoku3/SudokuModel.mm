@@ -8,11 +8,14 @@
 
 #import "SudokuModel.h"
 #include "qqwing.h"
+// added 28
+#define mCellToArrayIndex(cx,cy,x,y) ( (cy)*27 + (y)*9 + (cx)*3 + (x) )
 
 static SudokuModel* gSharedModel; //15
 
 @implementation SudokuModel
 
+/**
 - (id)init // 10
 {
     self = [super init];
@@ -25,6 +28,35 @@ static SudokuModel* gSharedModel; //15
     }
     return self;
 }
+ */ //removed in 27
+
+- (id)init
+{
+    self = [super init];
+    if (self)
+    {
+        
+        
+        _sudokuBoard = new SudokuBoard();
+        _sudokuBoard->setRecordHistory(true);
+        // int argc=3; // char* argv[]={“qqwing”,”–generate”,”10″}; // // qqwing(argc,argv);
+        //Next are from 28
+        _sudokuBoard->generatePuzzle();
+        bool haveSolution = false;
+        while( haveSolution == false)
+        {
+            haveSolution = _sudokuBoard->solve();
+        }
+        
+        //added 28
+        _playerPuzzleInProgress = new int[81];
+        
+        memcpy( _playerPuzzleInProgress,_sudokuBoard->getPuzzle(),81*sizeof(int));
+        
+    }
+    return self;
+}
+
 
 +(SudokuModel*)sharedModel // 15
 {
@@ -33,6 +65,27 @@ static SudokuModel* gSharedModel; //15
         gSharedModel = [[SudokuModel alloc] init];
     }
     return (gSharedModel);
+}
+
+// 28
+-(UInt32)getOriginalValueAtCellX:(UInt32)cellX andCellY:(UInt32)cellY
+                          xIndex:(UInt32)x yIndex:(UInt32)y
+{
+    int* puzzle = _sudokuBoard->getPuzzle();
+    
+    return( puzzle[ mCellToArrayIndex( cellX, cellY, x, y) ] );
+}
+
+-( UInt32 )getCurrentValueAtCellX:( UInt32 )cellX andCellY:( UInt32 )cellY
+                           xIndex:( UInt32 )x yIndex:( UInt32 )y
+{
+    return( _playerPuzzleInProgress[ mCellToArrayIndex(cellX,cellY,x,y) ] );
+}
+
+-( void )setCurrentValue:( UInt32 )value atCellX:( UInt32 )cellX andCellY:( UInt32 )cellY
+                  xIndex:( UInt32 )x yIndex:( UInt32 )y
+{
+    _playerPuzzleInProgress[ mCellToArrayIndex(cellX,cellY,x,y) ] = value;
 }
 
 @end
