@@ -12,6 +12,7 @@
 @interface SudokuView (hidden) //19
 -(NSRect)drawHashInBounds: (NSRect)bounds usingColor:(NSColor*) color;//19
 -(void)paintSelectionRectangle; //22
+-(void)drawValueAtCellX:(int)cellX andCellY:(int)cellY inBounds:(NSRect)bounds; //25
 
 @end
 
@@ -76,6 +77,44 @@
 }
 
 
+
+//25
+-(void)drawValueAtCellX:(int)cellX andCellY:(int)cellY inBounds:(NSRect)bounds
+{
+    if (self._windowController._model)
+    {
+        CGFloat thirdWidth = bounds.size.width / 3.0;
+        CGFloat thirdHeight = bounds.size.height / 3.0;
+        
+        for (int y=0; y<3; y++)
+        {
+            for (int x=0; x<3; x++)
+            {
+                int value = [self._windowController getCurrentValueAtCellX:cellX andCellY:cellY
+                                                                    xIndex:x yIndex:y];
+                
+                if ( value != 0 )
+                {
+                    NSPoint valueDrawPosition = NSMakePoint(bounds.origin.x +
+                                                            x * thirdWidth + thirdWidth / 3,
+                                                            bounds.origin.y +
+                                                            y * thirdHeight + thirdHeight / 6);
+                    
+                    NSString* valueString = [NSString stringWithFormat:@"%c",(char)value+'0'];
+                    
+                    NSFont *font = [NSFont fontWithName:@"American Typewriter" size:thirdHeight/2.0];
+                    
+                    NSDictionary *attrsDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+                                                     font, NSFontAttributeName,
+                                                     [NSColor blackColor], NSForegroundColorAttributeName,
+                                                     nil];
+                    
+                    [valueString drawAtPoint:valueDrawPosition withAttributes:attrsDictionary];
+                }
+            }
+        }
+    }
+}
 @end
 
 
