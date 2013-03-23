@@ -7,6 +7,7 @@
 //
 
 #import "SudokuWindowController.h"
+#import "AppDelegate.h"
 
 
 @interface SudokuWindowController ()
@@ -82,5 +83,38 @@
 -(BOOL)isPuzzleSolved
 {
     return ([_model isPuzzleSolved]);
+}
+
+// 36
+-(IBAction)menuSelected:(NSMenuItem*)sender
+{
+    NSString *name = sender.title;
+    
+    if ([name isEqualToString:@"Simple"])
+    {
+        [_model resetWithDifficulty:SudokuBoard::SIMPLE];
+    }
+    else if ([name isEqualToString:@"Easy"])
+    {
+        [_model resetWithDifficulty:SudokuBoard::EASY];
+    }
+    else if ([name isEqualToString:@"Intermediate"])
+    {
+        [_model resetWithDifficulty:SudokuBoard::INTERMEDIATE];
+    }
+    else if ([name isEqualToString:@"Expert"])
+    {
+        [_model resetWithDifficulty:SudokuBoard::EXPERT];
+    }
+    else // Random
+    {
+        [_model resetWithDifficulty:SudokuBoard::UNKNOWN];
+    }
+}
+
+// 36
+-(void)redrawWindow
+{
+    [_view setNeedsDisplay:YES];
 }
 @end

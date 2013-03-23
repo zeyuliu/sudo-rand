@@ -103,4 +103,10 @@
     [self setUpDifficultyMenu]; //34
 }
 
+-(void)redrawWindows
+{
+    [_playerWindowController redrawWindow];
+    [_playerWindowController.window makeKeyAndOrderFront:nil];
+}
+
 @end

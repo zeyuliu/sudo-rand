@@ -7,6 +7,7 @@
 //
 
 #import "SudokuModel.h"
+#import "AppDelegate.h"
 #include "qqwing.h"
 // added 28
 #define mCellToArrayIndex(cx,cy,x,y) ( (cy)*27 + (y)*9 + (cx)*3 + (x) )
@@ -29,7 +30,7 @@ static SudokuModel* gSharedModel; //15
     return self;
 }
  */ //removed in 27
-
+/** removed in 36
 - (id)init
 {
     self = [super init];
@@ -59,6 +60,24 @@ static SudokuModel* gSharedModel; //15
         
     }
     return self;
+}
+ */
+
+
+- (id)init
+{
+    self = [super init];
+    
+    if (self)
+    {
+        _playerPuzzleInProgress = new int[81];
+        
+        srandom((unsigned)clock());
+        
+        [self resetWithDifficulty:SudokuBoard::UNKNOWN];
+    }
+    
+    return (self);
 }
 
 -(BOOL)isPuzzleSolved //added 32
@@ -108,6 +127,53 @@ static SudokuModel* gSharedModel; //15
     {
         return NO;
     }
+}
+
+
+//36
+-(void)resetWithDifficulty:(SudokuBoard::Difficulty)level
+{
+    if (_sudokuBoard)
+    {
+        delete _sudokuBoard;
+    }
+    
+    _sudokuBoard = new SudokuBoard();
+    
+    _sudokuBoard->setRecordHistory(true);
+    
+    bool haveLevelPuzzle = false;
+    
+    NSLog(@"Generating Sudoku (level=%d)...",level);
+    
+    while (haveLevelPuzzle == false)
+    {
+        bool havePuzzle = _sudokuBoard->generatePuzzle();
+        
+        if ( havePuzzle )
+        {
+            bool haveSolution = _sudokuBoard->solve();
+            
+            if ( ( haveSolution ) && ( ( level == SudokuBoard::UNKNOWN ) || ( _sudokuBoard->getDifficulty() == level ) ) )
+            {
+                haveLevelPuzzle = true;
+            }
+        }
+    }
+    
+    NSLog(@"...done!");
+    
+    memcpy(_playerPuzzleInProgress,_sudokuBoard->getPuzzle(),81*sizeof(int));
+    
+    //    memcpy(_playerPuzzleInProgress,_sudokuBoard->getSolution(),81*sizeof(int));
+    //    _playerPuzzleInProgress[2]=0;
+    
+    _sudokuBoard->printPuzzle();
+    
+    //        _sudokuBoard->printSolution();
+    
+    //36
+    [[NSApp delegate] redrawWindows];
 }
 
 @end

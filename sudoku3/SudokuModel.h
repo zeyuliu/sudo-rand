@@ -34,4 +34,5 @@
                          xIndex:( UInt32 )x yIndex:( UInt32 )y;
 //32
 -(BOOL)isPuzzleSolved;
+-(void)resetWithDifficulty:(SudokuBoard::Difficulty)level;
 @end

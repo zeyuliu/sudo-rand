@@ -28,4 +28,8 @@
 
 //32
 -(BOOL)isPuzzleSolved;
+
+// 36
+-(IBAction)menuSelected:(NSMenuItem*)sender;
+-(void)redrawWindow;
 @end

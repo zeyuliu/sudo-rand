@@ -18,5 +18,5 @@
 }
 
 @property (assign) IBOutlet NSWindow *window;
-
+-(void)redrawWindows;
 @end
