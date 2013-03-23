@@ -53,19 +53,6 @@
 
 }
 
--(void)changeTimerSpeed:(CGFloat)speed
-{
-    if ( _timer )
-    {
-        [_timer invalidate];
-    }
-
-    _timer = [NSTimer scheduledTimerWithTimeInterval:speed
-                                              target:self
-                                            selector:@selector(timerFireMethod:)
-                                            userInfo:nil
-                                             repeats:YES];
-}
 
 -(void)redrawWindows
 {
