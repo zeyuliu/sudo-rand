@@ -11,6 +11,7 @@
 
 @interface SudokuView (hidden) //19
 -(NSRect)drawHashInBounds: (NSRect)bounds usingColor:(NSColor*) color;//19
+-(void)paintSelectionRectangle; //22
 
 @end
 
@@ -45,6 +46,33 @@
     [framePath stroke];
     
     return( NSMakeRect( bounds.origin.x, bounds.origin.y, thirdWidth, thirdHeight ) );
+    
+    
+    
+
+    
+
+}
+    // 22
+-(void)paintSelectionRectangle
+{
+    CGFloat thirdWidth = self.bounds.size.width / 3.0;
+    CGFloat thirdHeight = self.bounds.size.height / 3.0;
+    CGFloat ninthWidth = thirdWidth / 3.0;
+    CGFloat ninthHeight = thirdHeight / 3.0;
+    
+    NSRect selectionRect = NSMakeRect(_selectionCellX * thirdWidth + _selectionX * ninthWidth,
+                                      _selectionCellY * thirdHeight + _selectionY * ninthHeight,
+                                      ninthWidth, ninthHeight);
+    
+    NSColor* selectionColor = [NSColor colorWithSRGBRed: 0.0 green: 0.0 blue: 1.0
+                                                  alpha: 0.5];
+    [selectionColor setFill];
+    
+    NSBezierPath* selectionPath = [NSBezierPath bezierPathWithRoundedRect: selectionRect
+                                                                  xRadius: ( ninthWidth / 4.0 )
+                                                                  yRadius: ( ninthHeight / 4.0 )];
+    [selectionPath fill];
 }
 
 
@@ -66,7 +94,19 @@
 
 - (void)drawRect:(NSRect)dirtyRect //19
 {
-    NSRect oneSqureBounds = [self drawHashInBounds:self.bounds usingColor:[NSColor blackColor]]; // 20
+    NSRect oneSquareBounds = [self drawHashInBounds:self.bounds usingColor:[NSColor blackColor]]; // 20
+    for (UInt32 y = 0; y < 3; y++) // 21
+    {
+        for (UInt32 x = 0; x < 3; x++)
+        {
+            NSRect smallBounds = NSOffsetRect(oneSquareBounds, x * oneSquareBounds.size.width, y * oneSquareBounds.size.height );
+            
+            smallBounds = NSInsetRect(smallBounds, 4.0, 4.0);
+            
+            [self drawHashInBounds: smallBounds usingColor: [NSColor whiteColor]];
+        }
+    }
+    
 }
 
 @end
